@@ -3,47 +3,39 @@
 
 {{>navigation}}
 
-<div class="container p-5">
-    <div class="row">
-        <div class="col-md-4 mx-auto">
-            <div class="card text-center">
-                <div class="card-header">
-                    <h3>SIGN UP</h3>
-                </div>
-                <div class="card-body">
-                    <form action="/signup" method="post">
-                        <div class="form-group p-3">
-                            <input type="text" name="fullname" placeholder="Full Name" class="form-control" autofocus required>
-                        </div>
-                        <div class="form-group p-3">
-                            <input type="text" name="username" placeholder="Username" class="form-control" required>
-                        </div>
-                        <div class="form-group p-3">
-                            <input type="password" name="password" placeholder="Password" class="form-control" required>
-                        </div>
-
-                        <div class="container p-3">
+<div class="container ">
+        <div class="row justify-content-center pt-5 mt-5 mr-1">
+          <div class="col-md-4 formulario">
+            <form action="/signup" method="post">
+              <div class="form-group text-center">
+                <h3 class="text-light">Registro</h3>
+              </div>
+              <div class="form-group mx-sm-4 p-3">
+                <input type="text" name="fullname" placeholder="Full name" class="form-control" autofocus required>
+              </div>
+              <div class="form-group mx-sm-4 p-3">
+                <input type="text" name="username" placeholder="Username" class="form-control" required>
+              </div>
+              <div class="form-group mx-sm-4 p-3">
+                <input type="password" name="password" placeholder="Password" class="form-control" required>
+              </div>
+              <div class="container p-3">
                             
-                            <select class="form-select mb-3" aria-label="default select example" name="perfil" required>
-                                <option value="usuario">Usuario</option>
+                            <select class="form-select mb-3 text-light" aria-label="default select example" name="perfil" required>
+                                <option value="usuario" >Usuario</option>
                                 <option value="admin" disabled>Administrador</option>
                             </select>
 
-                        </div>
-
-                        <div class="form-group p-3">
-                            <button class="btn btn-success btn-block">
-                                SignUp
-                            </button>
-                        </div>
-
-                        {{#if error}}
-                            <p class="text-danger">{{error}}</p>
-                        {{/if}}
-
-                    </form>
                 </div>
-            </div>
+              <div class="form-group text-center mx-sm-4 p-2 ">
+                <input type="submit" class="btn btn-block text-light ingresar" value="SignUp">
+              </div>
+
+                {{#if error}}
+                    <p class="text-danger">{{error}}</p>
+                {{/if}}
+
+            </form>
+          </div>
         </div>
-    </div>
-</div>
+      </div>

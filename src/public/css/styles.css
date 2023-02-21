@@ -1,6 +1,7 @@
 html,body{
 
     height: 100vh;
+    
 }
 
 
@@ -11,7 +12,7 @@ body{
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #fff;
+    background-color: #0000008f;
     height: 100%;
     margin: 0;
 
@@ -48,7 +49,7 @@ body{
 
 .form-control:focus{
 
-    background: rgba(255, 255, 255, 0.603);
+    background: rgba(255, 255, 255, 0.43);
     box-shadow: none;
     outline: none;
 }
@@ -60,7 +61,7 @@ body{
 
 .ingresar{
 
-    background: rgba(0, 0, 0, 0.736);
+    background: rgba(0, 0, 0, 0.616);
     padding:10px;
     font-size: 18px;
     font-weight: 700!important;
@@ -76,6 +77,29 @@ body{
 
 .navP{
 
-    background: rgba(0, 0, 0, 0.629);
+    background: rgba(0, 0, 0, 0.44);
     border-radius: 0 0 20px 20px;
+}
+
+.form-select{
+
+    background: rgba(0, 0, 0, 0.45);
+    border-style: none;
+    border-bottom-style: solid;
+    transition: 0.5s ease-in;
+    outline: none;
+    box-shadow: none;
+
+}
+
+.form-select:focus{
+
+    background: rgba(255, 255, 255, 0.603);
+    box-shadow: none;
+    outline: none;
+}
+
+.form-select::placeholder{
+
+    color: rgba(255, 255, 255, 0.755);
 }
