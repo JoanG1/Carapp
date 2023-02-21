@@ -1,0 +1,78 @@
+
+{{!Vista formulario edicion de informacion atleta}}
+
+{{>navigation}} 
+
+
+<div class="container p-4">
+    <div class = "row">
+        <div class= "col-md-10 mx-auto">
+            <div class= "card ">
+                <div class="card-body">
+                    <form action="/links/edit/:{{atleta.id}}" method = "post">
+
+                        <div class="form-group p-4">
+                            <input type="text" value="{{atleta.title}}" class="form-control" name="title" placeholder="Title" autofocus>
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="text" value="{{atleta.nombre_entrenador}}" name= "documento" class= "form-control" placeholder="Documento">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="text" value="{{atleta.nombre_completo}}" name= "nombre_completo" class= "form-control" placeholder="Nombre Completo ">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="text" value="{{atleta.direccion}}" name= "direccion" class= "form-control" placeholder="Direccion">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="text" value="{{atleta.fecha_nacimiento}}" name= "fecha_nacimiento" class= "form-control" placeholder="Fecha De Nacimiento">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="text" value="{{atleta.lugar_residencia}}" name= "lugar_residencia" class= "form-control" placeholder="Lugar De Residencia">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="text" value="{{atleta.modalidad}}" name= "modalidad" class= "form-control" placeholder="Modalidad">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="text" value="{{atleta.nivel_estudio}}" name= "nivel_estudio" class= "form-control" placeholder="Nivel De Estudio">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="text" value="{{atleta.maximo_logro}}" name= "maximo_logro" class= "form-control" placeholder="Maximo Logro Deportivo">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="text" value="{{atleta.minoria_etnica}}" name= "minoria_etnica" class= "form-control" placeholder="Minoria Etnica">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="text" value="{{atleta.exento_cobro}}" name= "exento_cobro" class= "form-control" placeholder="Exento De Cobro">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="text" value="{{atleta.genero}}" name= "genero" class= "form-control" placeholder="Genero">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="text" value="{{atleta.lugar_procedencia}}" name= "lugar_procedencia" class= "form-control" placeholder="Lugar De Procedencia">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="text" value="{{atleta.actividad_economica}}" name= "actividad_economica" class= "form-control" placeholder="Actividad Economica">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="email" value="{{atleta.correo}}" name= "correo" class= "form-control" placeholder="Correo Electronico">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="text" value="{{atleta.nombre_entrenador}}" name= "nombre_entrenador" class= "form-control" placeholder="Nombre Del Entrenador">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="number" value="{{atleta.valor}}" name= "valor" class= "form-control" placeholder="Valor" value="10000">
+                        </div>
+                        <div class="form-group p-4">
+                            <textarea name="description" rows="2" class="form-control">{{link.description}}</textarea>
+                        </div>
+                        <div class="form-group ">
+                            <button class= "btn btn-sucess btn-block">
+                                Save
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
