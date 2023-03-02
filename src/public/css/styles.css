@@ -106,10 +106,10 @@ body{
 
 .PanelListado{
 
-    margin: 60px 60px 60px 280px;
+    margin: 5% 5% 5% 4%  ;
     background-color: rgba(0, 0, 0, 0.44);
     border-radius: 20px;
-    height: 800px;
+    height: 75%;
 }
 
 .PanelIndividual {
@@ -119,18 +119,22 @@ body{
 
 .Buscador{
 
-    width: 63.5%;
+    width: 100%;
+    display: flex;
+    
 }
 
 .Buscador-interior{
 
-    width: 400px;
+    width: 25%;
+    margin-left: 38%;
 }
 
 .buscador{
 
-    background-image: url(../img/icons8-google-web-search-50.png);
+    background-image: url(../img/icons8-busca-mas-30.png);
     background-position: center center;
+    background-repeat: no-repeat;
     border-radius: 10px;
     width: 50px;
     height: 40px;
@@ -150,3 +154,13 @@ body{
 
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.inputAtleta{
+
+    background: rgba(255, 255, 255, 0.353);
+    
+}
