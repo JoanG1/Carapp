@@ -5,12 +5,18 @@ const router = express.Router();
 
 const pool = require ('../database');
 
-router.get ('/importacion', (req, res) =>{
+router.get ('/importacion', async (req, res) =>{
 
-pool.query('SELECT * FROM atletas_car', (err, customers, fields) => {
+await pool.query('SELECT * FROM atletas_car', (err, customers, fields) => {
+
+    if(req.session.loggedin != true){
+
+        res.render('Atletas/login')
+
+    }else{
 
     const jsonAtletas = JSON.parse(JSON.stringify(customers))
-    console.log(jsonAtletas)
+    
 
     let workbook = new excel.Workbook()
     let worksheet = workbook.addWorksheet('Atletas')
@@ -38,13 +44,20 @@ pool.query('SELECT * FROM atletas_car', (err, customers, fields) => {
         {header: 'fecha de registro', key: 'created_at', width: 50, outlineLevel: 1}
     ]
 
-    worksheet.addRow(jsonAtletas)
+
+    for( let i = 0 ; i < jsonAtletas.length ; i++ ){
+
+        worksheet.addRow(jsonAtletas[i])
+
+    }
 
     workbook.xlsx.writeFile('atletas.xlsx').then(()=>{
         console.log("file saved")
     })
 
     res.redirect('/links')
+
+ }
 
 })
 

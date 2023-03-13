@@ -57,6 +57,7 @@ router.post('/add', async (req, res )=>{
 router.get ('/delete/:id', async (req, res) =>{
 
     const {id} = req.params
+    console.log(id)
     await pool.query('DELETE FROM atletas_car WHERE ID = ?', [id])
     res.redirect('/links')
 })
@@ -70,6 +71,7 @@ router.get('/', async (req,res)=>{
     }else{
 
         const atletas_car = await pool.query('SELECT * FROM atletas_car')
+        console.log(atletas_car)
         res.render('Atletas/list', {atletas_car, name:req.session.name})
     }
     
