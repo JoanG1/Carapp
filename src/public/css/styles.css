@@ -106,10 +106,11 @@ body{
 
 .PanelListado{
 
-    margin: 5% 5% 5% 4%  ;
+    margin-top: 5%;
     background-color: rgba(0, 0, 0, 0.44);
     border-radius: 20px;
     height: 75%;
+    width: 100%;
 }
 
 .PanelIndividual {

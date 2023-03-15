@@ -39,7 +39,7 @@ await pool.query('SELECT * FROM atletas_car', (err, customers, fields) => {
         {header: 'Actividad economica', key: 'actividad_economica', width: 50},
         {header: 'Correo', key: 'correo', width: 50},
         {header: 'Nombre entrenador', key: 'nombre_entrenador', width: 50},
-        {header: 'Valor', key: 'ctividad_economica', width: 50},
+        {header: 'Valor', key: 'valor', width: 50},
         {header: 'Description', key: 'description', width: 50},
         {header: 'fecha de registro', key: 'created_at', width: 50, outlineLevel: 1}
     ]
